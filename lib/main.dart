@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
+      debugShowCheckedModeBanner: false, 
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.white),
       ),
@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
 }
 
 class WebViewPage extends StatefulWidget {
-  const WebViewPage({super.key}   );
+  const WebViewPage({super.key});
 
   @override
   State<WebViewPage> createState() => _WebViewPageState();
@@ -51,10 +51,7 @@ class _WebViewPageState extends State<WebViewPage> {
       body: Stack(
         children: [
           SafeArea(child: WebViewWidget(controller: _controller)),
-          if (_isLoading)
-            const Center(
-              child: CircularProgressIndicator(),
-            ),
+          if (_isLoading) const Center(child: CircularProgressIndicator()),
         ],
       ),
     );
